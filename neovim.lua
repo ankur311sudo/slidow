@@ -2,27 +2,42 @@ return {
 	{
 		"LazyVim/LazyVim",
 		opts = {
-			colorscheme = "catppuccin",
+			colorscheme = "tokyodark",
 		},
 	},
+
 	{
-		"catppuccin/nvim",
-		name = "catppuccin",
+		"tiagovla/tokyodark.nvim",
+		priority = 1000,
 		opts = {
-			flavour = "mocha", -- latte, frappe, macchiato, mocha
-			transparent_background = false, -- or true if you prefer
-			term_colors = true,
-			integrations = {
-				cmp = true,
-				gitsigns = true,
-				nvimtree = true,
-				treesitter = true,
-				telescope = { enabled = true },
-				notify = true,
-				mini = { enabled = true },
-				lsp_trouble = true,
-				which_key = true,
-			},
+			-- keep empty or add options later
 		},
+		config = function(_, opts)
+			require("tokyodark").setup(opts)
+			vim.cmd([[colorscheme tokyodark]])
+
+			-- ================================
+			-- FIX TABLINE CURRENT BUFFER
+			-- ================================
+			local hl = vim.api.nvim_set_hl
+
+			-- Active tab / buffer
+			hl(0, "TabLineSel", {
+				fg = "#11121D", -- background color
+				bg = "#7AA2F7", -- blue accent
+				bold = true,
+			})
+
+			-- Inactive tabs
+			hl(0, "TabLine", {
+				fg = "#787C99",
+				bg = "#11121D",
+			})
+
+			-- Fill area
+			hl(0, "TabLineFill", {
+				bg = "#11121D",
+			})
+		end,
 	},
 }
