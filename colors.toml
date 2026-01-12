@@ -1,0 +1,26 @@
+accent = "#7AA2F7"
+cursor = "#A0A8CD"
+foreground = "#A0A8CD"
+background = "#11121D"
+
+selection_foreground = "#11121D"
+selection_background = "#7AA2F7"
+
+color0  = "#32344A"   # black
+color1  = "#F7768E"   # red
+color2  = "#9ECE6A"   # green
+color3  = "#E0AF68"   # yellow
+color4  = "#7AA2F7"   # blue
+color5  = "#AD8EE6"   # magenta
+color6  = "#449DAB"   # cyan
+color7  = "#787C99"   # white
+
+color8  = "#444B6A"   # bright black
+color9  = "#FF7A93"   # bright red
+color10 = "#B9F27C"   # bright green
+color11 = "#FF9E64"   # bright yellow
+color12 = "#7DA6FF"   # bright blue
+color13 = "#BB9AF7"   # bright magenta
+color14 = "#0DB9D7"   # bright cyan
+color15 = "#ACB0D0"   # bright white
+
